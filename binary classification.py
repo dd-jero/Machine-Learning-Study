@@ -1,3 +1,5 @@
+# sigmoid를 이용한 binary classification
+
 import tensorflow.compat.v1 as tf       # tensorflow 2.0 이상 버전 부터는 session과 placeholder를 사용하지 못한다.
 tf.disable_v2_behavior()                # 그래서 compat 모듈을 사용하여 2.0 기능을 끄도록 설정하고 v1을 사용하도록 해야 코드가 동작한다. 
 
