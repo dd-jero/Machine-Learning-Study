@@ -6,7 +6,7 @@ tf.set_random_seed(777)
 x_data = [[1,2],[2,3],[3,1],[4,3],[5,3],[6,2]]
 y_data =[[0],[0],[0],[1],[1],[1]]
 
-# placeholder는 tensorflow가 연산을 실행할 때 값을 넣는 공간 (입력될 값의 타입과 size를 미리 정의해두면 후에 연산 과정에서 사용 )
+# placeholder는 tensorflow가 연산을 실행할 때 값을 넣는 공간 (입력될 값의 타입과 size를 미리 정의해두면 후에 연산 과정에서 사용)
 X = tf.placeholder(tf.float32, shape=[None, 2])        
 Y = tf.placeholder(tf.float32, shape=[None, 1])
 
@@ -24,14 +24,14 @@ accuracy = tf.reduce_mean(tf.cast(tf.equal(predicted, Y), dtype = tf.float32))
 # tensorflow에서 session은 정의한 노드 및 연산 그래프를 실행할 수 있는 환경을 제공해주는 클래스이다. 
 # 연산을 실행하기 위한 리소스를 할당하고 중간 결과 및 변수값을 저장하는 역할을 한다.)
 with tf.Session() as sess:                                                  
-    sess.run(tf.global_variables_initializer())     # global_variable_initializer로 연산을 시작하기 전 변수들을 초기화 해야
+    sess.run(tf.global_variables_initializer())     # global_variable_initializer로 연산을 시작하기 전 변수들을 초기화 해야함.
 
     for step in range(10001):
         cost_val, _ = sess.run([cost,train], feed_dict={X:x_data, Y:y_data})
-        if step % 200 == 0:
+        if step % 200 == 0:ㄴ
             print(step, cost_val)
     
-h, c, a = sess.run([hypothesis, predicted, accuracy], 
-                    feed_dict={X:x_data, Y:y_data})
+    h, c, a = sess.run([hypothesis, predicted, accuracy], 
+                        feed_dict={X:x_data, Y:y_data})
 
-print("\nhypothesis: ", h, "\nCorrect(Y): ",c, "\nAccuracy: ", a)
+    print("\nhypothesis: ", h, "\nCorrect(Y): ",c, "\nAccuracy: ", a)
