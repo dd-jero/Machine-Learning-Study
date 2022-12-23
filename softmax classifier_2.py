@@ -1,3 +1,5 @@
+# softmax classifier_2 (data-04-zoo.csv 파일 필요!)
+
 import tensorflow.compat.v1 as tf
 import numpy as np
 tf.disable_v2_behavior()
