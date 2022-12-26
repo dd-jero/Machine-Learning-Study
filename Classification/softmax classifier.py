@@ -1,4 +1,5 @@
 # softmax classifier_1
+# multinomial classification으로 세 가지 이상의 class로 분류
 
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior()
