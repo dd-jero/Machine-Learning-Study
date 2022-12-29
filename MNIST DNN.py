@@ -1,10 +1,10 @@
-import tensorflow.compat.v1 as tf
+# tensorflow v1에서 MNIST DNN
+import tensorflow as tf
 import random
 import matplotlib.pyplot as plt
 
 from tensorflow.examples.tutorials.mnist import input_data
 
-tf.disable_v2_behavior()
 tf.set_random_sedd(777)
 
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
