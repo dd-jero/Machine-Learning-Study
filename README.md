@@ -1,5 +1,5 @@
 # Multimedia-Network-Lab
-- Machine-runninng
+- Machine-learning / Deep-learning
   - Classification
   - Deep Neural Network (DNN)
   - Convolution Neural Network (CNN)
