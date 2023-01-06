@@ -49,10 +49,10 @@ public class MummyAgent : Agent
 
     public override void CollectObservations(Unity.MLAgents.Sensors.VectorSensor sensor) // 환경 정보를 관측/수집해 정책 결정을 위해 브레인에 전달하는 메소드
     {
-        sensor.AddObservation(targetTr.localPosition);  // (x,y,z) 3개의 데이터 : 타켓의 위치
-        sensor.AddObservation(transform.localPosition); // (x,y,z) 3개의 데이터 : 에이전트의 위치
-        sensor.AddObservation(rigidbody.velocity.x);    // (x) 1개의 데이터 : 에이전트의 x축 속도
-        sensor.AddObservation(rigidbody.velocity.z);    // (z) 1개의 데이터 : 에이전트의 z축 속도 
+        sensor.AddObservation(targetTr.localPosition);  // (x,y,z) 3개의 데이터: 타켓의 위치
+        sensor.AddObservation(transform.localPosition); // (x,y,z) 3개의 데이터: 에이전트의 위치
+        sensor.AddObservation(rigidbody.velocity.x);    // (x) 1개의 데이터: 에이전트의 x축 속도
+        sensor.AddObservation(rigidbody.velocity.z);    // (z) 1개의 데이터: 에이전트의 z축 속도 
     }
     
     public override void OnActionReceived(ActionBuffers actions) // 정책으로 전달받은 데이터를 기반으로 행동(Action)을 실행하는 메소드
