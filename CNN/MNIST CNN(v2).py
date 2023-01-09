@@ -1,3 +1,5 @@
+# tensorflow v2를 사용한 CNN으로 MNIST 분류
+
 import tensorflow as tf
 import numpy as np
 import random
