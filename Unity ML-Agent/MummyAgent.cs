@@ -1,4 +1,4 @@
-//MummyAgent가 박스에 충돌 시 Epsoide 종료 및 초기화 (ppo algorithm으로 training)
+//MummyAgent가 박스에 충돌 시 Episode 종료 및 초기화 (PPO algorithm으로 training)
 
 using System.Collections;
 using System.Collections.Generic;
